@@ -10,7 +10,7 @@ public interface UserService {
 
 	String viewInventory();
 
-	String placeOrder(int orderId[]);
+	String placeOrder(int orderId[], String city);
 	
 	String makeReservation(String date, String month, String year, int members);
 	

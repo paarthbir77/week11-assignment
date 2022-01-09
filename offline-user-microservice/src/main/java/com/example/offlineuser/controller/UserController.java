@@ -26,8 +26,8 @@ public class UserController {
 	}
 
 	@PostMapping("/placeOrder")
-	public String placeOrder(int orderId[]) {
-		return userService.placeOrder(orderId);
+	public String placeOrder(int orderId[], String city) {
+		return userService.placeOrder(orderId, city);
 	}
 	
 	@PostMapping("/makeReservation")

@@ -18,8 +18,8 @@ public class AdminClient {
 		String url = "http://localhost:8081/admin-service/getInventory/";
 		return template.getForObject(url, String.class);
 	}
-	public String saveFinReport(String username,int bill,String date,String month,String year) {
-		String url = "http://localhost:8081/admin-service/saveFinancialReport?bill="+bill+"&date="+date+"&month="+month+"&username="+username+"&year="+year;
+	public String saveFinReport(String username,int bill,String date,String month,String year, String city) {
+		String url = "http://localhost:8081/admin-service/saveFinancialReport?bill="+bill+"&city="+city+"&date="+date+"&month="+month+"&username="+username+"&year="+year;
 		return template.getForObject(url, String.class);
 	}
 	public boolean checkInventoryforItem(int id) {

@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
 	
 	
 	@Override
-	public String placeOrder(int orderId[]) {
+	public String placeOrder(int orderId[], String city) {
 		int bill=0;
 		for(int i=0;i<orderId.length;i++) {
 			if(adminClient.checkInventoryforItem(orderId[i])) {
@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService {
 			e.printStackTrace();
 		}
 		
-		return adminClient.saveFinReport(username, bill, dateString.substring(8,10), dateString.substring(5, 7), dateString.substring(0, 4));
+		return adminClient.saveFinReport(username, bill, dateString.substring(8,10), dateString.substring(5, 7), dateString.substring(0, 4), city);
 	}
 
 	@Override
